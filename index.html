@@ -6,30 +6,18 @@
     <title>Shopping List</title>
 </head>
 <body>
-    <form>
+    <form> 
         <div>
-            <label>enter an item</label>
-            <input type="text" id="input-item">
+            <label for="item">Enter an item:</label>
+            <input type="text" id="item" placeholder="Item goes here.." required/>
             <div>
-                <button type="submit" id="add-item-button">add item</button>
-                
-                <script>
-                    const newItem = document.getElementById("input-item");
-                    const button = document.getElementById("add-item-button");
-                    const listItem = document.getElementById("list-item");
-                    button.addEventListener("click", function() {
-                        alert("Button clicked!");
-                    });
-                </script>
-
+                <button id="add" value="Add to List">Add Item</button>
             </div>
         </div>
     </form>
     <div>
-        <ul id="list-items">
-
-        </ul>
+        <ul id="list"></ul>
     </div>
-
+    <script src="./main.js" defer></script>
 </body>
 </html>
