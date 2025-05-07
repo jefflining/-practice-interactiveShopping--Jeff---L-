@@ -16,12 +16,14 @@
                     list.appendChild(editButton);
                     document.getElementById("list").appendChild(list);
 
-                    removeButton.addEventListener("click", function() {
-                        document.getElementById("list").removeChild(list);
-                    });
-                    
                     editButton.addEventListener("click", function() {
                         editButton.innerText = "Save"
+
+                    });
+                    
+                    removeButton.addEventListener("click", function() {
+                        document.getElementById("list").removeChild(list);
+                    
                     });
                     editButton.addEventListener("click", function() {
                         const newItem = document.getElementById("item").value;
