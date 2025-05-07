@@ -1,6 +1,3 @@
-                    
-           // window.addEventListener("load", () => {
-
                 const addButton = document.getElementById("add");
                 const removeButton = document.getElementById("remove");
                 const editButton = document.getElementById ("edit");        
@@ -9,18 +6,18 @@
                 addButton.addEventListener("click", function() {
                     const list = document.createElement("li");
                     const item = document.getElementById("item").value;
-                    const itemText = document.createTextNode(item);
-                    const removeButton = document.createElement("button");
+                    const itemNode = document.createTextNode(item);
                     const editButton = document.createElement("button");
-                    editButton.innerText = "Edit";
+                    const removeButton = document.createElement("button");
                     removeButton.innerText = "Remove";
-                    list.appendChild(itemText);
-                    list.appendChild(editButton);
+                    editButton.innerText = "Edit";
+                    list.appendChild(itemNode);
                     list.appendChild(removeButton);
+                    list.appendChild(editButton);
                     document.getElementById("list").appendChild(list);
 
                     removeButton.addEventListener("click", function() {
-                        document.getElementById(`list`).removeChild(list);
+                        document.getElementById("list").removeChild(list);
                     });
                     
                     editButton.addEventListener("click", function() {
@@ -36,4 +33,4 @@
                     });
                 
                 
-           // })
+      
